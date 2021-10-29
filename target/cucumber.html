@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cucumber</title>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22ml-3%20ml-md-0%22%20viewBox%3D%220%200%2040.59%2046.31%22%20width%3D%2240.59%22%20height%3D%2246.31%22%3E%0A%20%20%20%20%3Cg%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%2323d96c%22%20fill-rule%3D%22evenodd%22%20d%3D%22M30.283%203.645q-.528-.317-1.08-.593a16.164%2016.164%200%2000-1.154-.518c-.124-.052-.247-.1-.372-.149-.343-.127-.689-.268-1.042-.371a19.427%2019.427%200%2010-9.792%2037.51v5.56c11.676-1.753%2022.016-10.979%2022.787-23.093.459-7.289-3.193-14.73-9.347-18.346z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20d%3D%22M15.787%2046.307v-5.935A20.472%2020.472%200%201126.959%201.015c.274.08.557.187.832.291l.248.093c.165.064.291.113.417.167.348.137.739.313%201.208.543q.589.295%201.153.633c6.393%203.756%2010.354%2011.518%209.857%2019.316-.763%2012-10.722%2022.122-23.679%2024.067zm4.8-44.214h-.026a18.366%2018.366%200%2000-3.524%2036.408l.85.165v5.18c11.392-2.224%2020.009-11.272%2020.686-21.922.448-7.033-3.1-14.018-8.83-17.383l-.008-.005A14.691%2014.691%200%200027.654%203.5a5.74%205.74%200%2000-.344-.138l-.27-.1a9.49%209.49%200%2000-.708-.249%2018.425%2018.425%200%2000-5.743-.92z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20fill-rule%3D%22evenodd%22%20d%3D%22M16.666%2010.58a1.8%201.8%200%20011.583.608%204.184%204.184%200%2001.728%201.107c.645%201.422%201.027%203.461.23%204.605a6.334%206.334%200%2001-3.981-3.087%203.236%203.236%200%2001-.347-1.339%201.957%201.957%200%20011.787-1.894zm-5.683%208.025a7.742%207.742%200%20001.218.737%205.789%205.789%200%20004.883-.138%206.116%206.116%200%2000-3.345-3.45%203.664%203.664%200%2000-1.442-.321%201.884%201.884%200%2000-.319%200%201.766%201.766%200%2000-.995%203.172zm6.1%203.433c-.777-.518-2.379-.309-3.312-.292a4.416%204.416%200%2000-1.666.352%203.5%203.5%200%2000-1.218.738%201.817%201.817%200%20001.409%203.171%203.3%203.3%200%20001.442-.321c1.436-.62%203.141-2.32%203.346-3.648zm2.61%202a6.556%206.556%200%2000-3.724%203.506%203.091%203.091%200%2000-.321%201.314%201.907%201.907%200%20003.3%201.346%207.422%207.422%200%2000.7-1.218c.621-1.333.866-3.72.046-4.948zm2.557-7.167a5.941%205.941%200%20003.7-3.167%203.243%203.243%200%2000.319-1.346%201.915%201.915%200%2000-1.794-1.954%201.832%201.832%200%2000-1.6.641%207.382%207.382%200%2000-.705%201.218c-.62%201.434-.842%203.48.081%204.603zm4.208%2012.115a3.244%203.244%200%2000-.321-1.345%205.869%205.869%200%2000-3.554-3.269%205.386%205.386%200%2000-.226%204.711%204.147%204.147%200%2000.7%201.121c1.133%201.23%203.505.32%203.402-1.218zm4.2-6.28a7.466%207.466%200%2000-1.217-.7%204.425%204.425%200%2000-1.666-.352%206.4%206.4%200%2000-3.188.555%205.959%205.959%200%20003.316%203.386%203.672%203.672%200%20001.442.32%201.8%201.8%200%20001.31-3.209z%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E">
+	<style>
+.cucumber-react .cucumber-status--passed {
+  color: #2CB14A;
+}
+.cucumber-react .cucumber-status--skipped {
+  color: #00A0CC;
+}
+.cucumber-react .cucumber-status--pending {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--undefined {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--ambiguous {
+  color: #F4EBFD;
+}
+.cucumber-react .cucumber-status--failed {
+  color: #BB0000;
+}
+.cucumber-react .cucumber-status--unknown {
+  color: #B6BECB;
+}
+.cucumber-react h1, .cucumber-react h2, .cucumber-react h3 {
+  padding: 0;
+  margin: 0;
+}
+.cucumber-react a {
+  color: inherit;
+}
+.cucumber-react .gherkin-document-list {
+  font: 14px "Open Sans", sans-serif;
+  color: #161C24;
+  background: #fff;
+  overflow-x: hidden;
+}
+.cucumber-react .cucumber-title {
+  margin-top: 0.3em;
+  margin-bottom: 0;
+  display: inline-block;
+}
+.cucumber-react .cucumber-title__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-title__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-tags {
+  padding: 0;
+  margin-bottom: 0;
+}
+.cucumber-react .cucumber-tags .cucumber-tag {
+  display: inline;
+  list-style-type: none;
+  padding: 4px 8px 4px 8px;
+  margin-right: 6px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+}
+.cucumber-react .cucumber-feature__icon {
+  padding-top: 0.35em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-description,
+.cucumber-react .cucumber-children {
+  margin-left: 1em;
+}
+.cucumber-react .cucumber-feature,
+.cucumber-react .cucumber-rule,
+.cucumber-react .cucumber-scenario,
+.cucumber-react .cucumber-background {
+  margin-bottom: 1em;
+}
+.cucumber-react .cucumber-steps {
+  list-style-type: none;
+  padding-left: 10px;
+}
+.cucumber-react .cucumber-steps .cucumber-step {
+  display: flex;
+}
+.cucumber-react .cucumber-steps .cucumber-step__status {
+  padding-top: 0.2em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-steps .cucumber-step__content {
+  flex-grow: 1;
+  max-width: calc(100% - 1.5em);
+}
+.cucumber-react .cucumber-steps .cucumber-step__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-steps .cucumber-step__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-steps .cucumber-step__param {
+  font-weight: normal;
+  font-style: italic;
+}
+.cucumber-react .cucumber-table {
+  border-collapse: collapse;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.cucumber-react .cucumber-table__header-cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell__status {
+  padding: 0.5em 3px 3px 3px;
+}
+.cucumber-react .cucumber-table__cell__step {
+  flex-grow: 1;
+}
+.cucumber-react .cucumber-code {
+  padding: 0.25em;
+  background-color: #ebebeb;
+}
+.cucumber-react .cucumber-error {
+  padding: 0.5em;
+  margin: 0;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-no-documents {
+  font: 14px "Open Sans", sans-serif;
+}
+.cucumber-react .cucumber-attachment__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-attachment__image {
+  max-width: 100%;
+  margin-top: 1em;
+}
+.cucumber-react .cucumber-attachment__text {
+  background-color: #ebebeb;
+  padding: 0.5em;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-anchor {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 0.3em;
+}
+.cucumber-react .cucumber-anchor__link {
+  opacity: 0;
+  transition: all 0.35s ease-in-out;
+  position: absolute;
+  left: -20px;
+  display: flex;
+  align-items: center;
+}
+.cucumber-react .cucumber-anchor__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-anchor:hover a {
+  opacity: 1;
+  width: max-content;
+  transition: all 0.35s ease-in-out;
+}
+.cucumber-react .cucumber-anchor > * {
+  height: 100%;
+  margin-top: 0px;
+}
+
+.cucumber-report-header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font: 11px "Open Sans", sans-serif;
+  margin-bottom: 1em;
+}
+.cucumber-report-header > * {
+  padding: 1em;
+}
+.cucumber-report-header .cucumber-status-filter {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-status-filter table {
+  width: 100%;
+}
+.cucumber-report-header .cucumber-execution-data {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-search-bar {
+  border-right: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search input {
+  padding: 0.4em;
+  border-radius: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search button {
+  height: 2.2em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar p.help {
+  font-size: 80%;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul {
+  display: inline;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li input {
+  display: inline-block;
+  width: auto;
+  height: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li label {
+  padding-right: 1em;
+}
+
+@media only screen and (min-width: 600px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-execution-data {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: auto;
+  }
+}
+.accordion {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.accordion__item + .accordion__item {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordion__button {
+    background-color: #f4f4f4;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+}
+
+.accordion__button:hover {
+    background-color: #ddd;
+}
+
+.accordion__button:before {
+    display: inline-block;
+    content: '';
+    height: 10px;
+    width: 10px;
+    margin-right: 12px;
+    border-bottom: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(-45deg);
+}
+
+.accordion__button[aria-expanded='true']::before,
+.accordion__button[aria-selected='true']::before {
+    transform: rotate(45deg);
+}
+
+.accordion__panel {
+    padding: 20px;
+    animation: fadein 0.35s ease-in;
+}
+
+	</style>
+</head>
+<body>
+<div id="content">
+</div>
+<script>
+window.CUCUMBER_MESSAGES = [{"meta":{"protocolVersion":"15.0.0","implementation":{"name":"cucumber-jvm","version":"6.11.0"},"runtime":{"name":"Java HotSpot(TM) 64-Bit Server VM","version":"25.231-b11"},"os":{"name":"Mac OS X"},"cpu":{"name":"x86_64"}}},{"testRunStarted":{"timestamp":{"seconds":"1635482510","nanos":411000000}}},{"source":{"uri":"file:///Users/mara311/Desktop/gitHub/tryCloud_SG_Jenkins1/src/test/resources/features/us01_login.feature","data":"@smoke\nFeature: As a user, I should be able to login to TryCloud app\n\n  Background:\n    Given user on the login page\n\n  Scenario Outline: verify user login successfully \"\u003cusername\u003e\"\n    When user enter valid \"\u003cusername\u003e\" and \"\u003cpassword\u003e\"\n    And  user click login button\n    Then user should be at dashboard page\n    Examples:\n      | username | password    |\n      | User9    | Userpass123 |\n      | User39   | Userpass123 |\n      | User65   | Userpass123 |\n\n\n\n\n    #submitType\n\n  Scenario Outline: verify user login fail with invalid credentials \"\u003cusername\u003e\"\n    When user enter valid \"\u003cusername\u003e\" and \"\u003cpassword\u003e\"\n    And  user click login button\n    Then \"\u003cmessage\u003e\" message should be displayed\n\n    Examples:\n      | username | password    | message                     |\n      | User9    | Wrong       | Wrong username or password. |\n      | Wrong    | Userpass123 | Wrong username or password. |\n      | Wrong    | Wrong       | Wrong username or password. |\n\n\n\n    #validationMessage","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///Users/mara311/Desktop/gitHub/tryCloud_SG_Jenkins1/src/test/resources/features/us01_login.feature","feature":{"location":{"line":2,"column":1},"tags":[{"location":{"line":1,"column":1},"name":"@smoke","id":"615ebe92-672a-42f2-a129-211ef5443ea7"}],"language":"en","keyword":"Feature","name":"As a user, I should be able to login to TryCloud app","children":[{"background":{"location":{"line":4,"column":3},"keyword":"Background","steps":[{"location":{"line":5,"column":5},"keyword":"Given ","text":"user on the login page","id":"fe098ec3-4486-4ab7-bb0e-2c7f58e7ca28"}],"id":"85d5f8f2-beba-43cb-8d23-b43307be1bfc"}},{"scenario":{"location":{"line":7,"column":3},"keyword":"Scenario Outline","name":"verify user login successfully \"\u003cusername\u003e\"","steps":[{"location":{"line":8,"column":5},"keyword":"When ","text":"user enter valid \"\u003cusername\u003e\" and \"\u003cpassword\u003e\"","id":"1e27dc3e-e25c-4327-a3a0-34bd86d5c318"},{"location":{"line":9,"column":5},"keyword":"And ","text":"user click login button","id":"cd284527-2130-4268-8e3d-6212cdc14d27"},{"location":{"line":10,"column":5},"keyword":"Then ","text":"user should be at dashboard page","id":"dfd5433c-8d10-42a0-b4a8-46a401fea67b"}],"examples":[{"location":{"line":11,"column":5},"keyword":"Examples","tableHeader":{"location":{"line":12,"column":7},"cells":[{"location":{"line":12,"column":9},"value":"username"},{"location":{"line":12,"column":20},"value":"password"}],"id":"875eef0d-16ec-4bc8-aa34-9b6da8a2974d"},"tableBody":[{"location":{"line":13,"column":7},"cells":[{"location":{"line":13,"column":9},"value":"User9"},{"location":{"line":13,"column":20},"value":"Userpass123"}],"id":"141c1aa1-772a-47f7-aa69-f8d9495aa10a"},{"location":{"line":14,"column":7},"cells":[{"location":{"line":14,"column":9},"value":"User39"},{"location":{"line":14,"column":20},"value":"Userpass123"}],"id":"b87d6147-498d-4101-814e-9a1df458b420"},{"location":{"line":15,"column":7},"cells":[{"location":{"line":15,"column":9},"value":"User65"},{"location":{"line":15,"column":20},"value":"Userpass123"}],"id":"9848a606-c618-4934-a0ad-9d4f40eb1ede"}],"id":"a0d2afcc-d481-4bab-8b4f-3444e719a988"}],"id":"d8449bad-da21-4f06-9d07-9a4da18c29c6"}},{"scenario":{"location":{"line":22,"column":3},"keyword":"Scenario Outline","name":"verify user login fail with invalid credentials \"\u003cusername\u003e\"","steps":[{"location":{"line":23,"column":5},"keyword":"When ","text":"user enter valid \"\u003cusername\u003e\" and \"\u003cpassword\u003e\"","id":"f12652e6-6ea5-4908-bf8d-70d0c660aca4"},{"location":{"line":24,"column":5},"keyword":"And ","text":"user click login button","id":"5c1f9178-0859-496d-a01f-2fe5a60c1b2f"},{"location":{"line":25,"column":5},"keyword":"Then ","text":"\"\u003cmessage\u003e\" message should be displayed","id":"6da6286f-af3d-47b9-abe1-dc5f5da2febb"}],"examples":[{"location":{"line":27,"column":5},"keyword":"Examples","tableHeader":{"location":{"line":28,"column":7},"cells":[{"location":{"line":28,"column":9},"value":"username"},{"location":{"line":28,"column":20},"value":"password"},{"location":{"line":28,"column":34},"value":"message"}],"id":"2b7b3cd9-0099-4a98-997f-49f44bc6b746"},"tableBody":[{"location":{"line":29,"column":7},"cells":[{"location":{"line":29,"column":9},"value":"User9"},{"location":{"line":29,"column":20},"value":"Wrong"},{"location":{"line":29,"column":34},"value":"Wrong username or password."}],"id":"a48d673e-2886-4597-bc65-84843e94be28"},{"location":{"line":30,"column":7},"cells":[{"location":{"line":30,"column":9},"value":"Wrong"},{"location":{"line":30,"column":20},"value":"Userpass123"},{"location":{"line":30,"column":34},"value":"Wrong username or password."}],"id":"644cf4e1-8d65-4741-8f60-43fa5f3f36f4"},{"location":{"line":31,"column":7},"cells":[{"location":{"line":31,"column":9},"value":"Wrong"},{"location":{"line":31,"column":20},"value":"Wrong"},{"location":{"line":31,"column":34},"value":"Wrong username or password."}],"id":"008fc0de-495e-45b8-91a6-aca0dc876f66"}],"id":"a13c94e2-39cd-4019-bc01-df849267b5c6"}],"id":"ba5e94f3-e375-4675-a2ad-172a421b50ca"}}]},"comments":[{"location":{"line":20,"column":1},"text":"    #submitType"},{"location":{"line":35,"column":1},"text":"    #validationMessage"}]}},{"pickle":{"id":"1864cbf2-5f13-4d46-95bc-a710ac7fd429","uri":"file:///Users/mara311/Desktop/gitHub/tryCloud_SG_Jenkins1/src/test/resources/features/us01_login.feature","name":"verify user login successfully \"User9\"","language":"en","steps":[{"text":"user on the login page","id":"1ee45921-4ceb-4695-9fbe-14c1bce7c727","astNodeIds":["fe098ec3-4486-4ab7-bb0e-2c7f58e7ca28"]},{"text":"user enter valid \"User9\" and \"Userpass123\"","id":"dade0f40-d7f2-4c1d-abc7-49f272b2a425","astNodeIds":["1e27dc3e-e25c-4327-a3a0-34bd86d5c318","141c1aa1-772a-47f7-aa69-f8d9495aa10a"]},{"text":"user click login button","id":"f589bfa3-2f15-4f81-ba51-6fba34b9d55e","astNodeIds":["cd284527-2130-4268-8e3d-6212cdc14d27","141c1aa1-772a-47f7-aa69-f8d9495aa10a"]},{"text":"user should be at dashboard page","id":"3ca916a1-43cb-4e82-b897-68cf025276b7","astNodeIds":["dfd5433c-8d10-42a0-b4a8-46a401fea67b","141c1aa1-772a-47f7-aa69-f8d9495aa10a"]}],"tags":[{"name":"@smoke","astNodeId":"615ebe92-672a-42f2-a129-211ef5443ea7"}],"astNodeIds":["d8449bad-da21-4f06-9d07-9a4da18c29c6","141c1aa1-772a-47f7-aa69-f8d9495aa10a"]}},{"pickle":{"id":"df761931-5f63-41ae-8ba6-4aaac1de9d10","uri":"file:///Users/mara311/Desktop/gitHub/tryCloud_SG_Jenkins1/src/test/resources/features/us01_login.feature","name":"verify user login successfully \"User39\"","language":"en","steps":[{"text":"user on the login page","id":"a3cd907c-a2f2-45de-aeea-4984ea8cca4e","astNodeIds":["fe098ec3-4486-4ab7-bb0e-2c7f58e7ca28"]},{"text":"user enter valid \"User39\" and \"Userpass123\"","id":"3f433bbf-8813-4ebf-975f-f5eaa1bf1ab4","astNodeIds":["1e27dc3e-e25c-4327-a3a0-34bd86d5c318","b87d6147-498d-4101-814e-9a1df458b420"]},{"text":"user click login button","id":"2bb7c5d3-6bf4-4a80-bfd3-f68e9192bc36","astNodeIds":["cd284527-2130-4268-8e3d-6212cdc14d27","b87d6147-498d-4101-814e-9a1df458b420"]},{"text":"user should be at dashboard page","id":"a5ad925e-d349-4c68-91f6-a981c4aefd53","astNodeIds":["dfd5433c-8d10-42a0-b4a8-46a401fea67b","b87d6147-498d-4101-814e-9a1df458b420"]}],"tags":[{"name":"@smoke","astNodeId":"615ebe92-672a-42f2-a129-211ef5443ea7"}],"astNodeIds":["d8449bad-da21-4f06-9d07-9a4da18c29c6","b87d6147-498d-4101-814e-9a1df458b420"]}},{"pickle":{"id":"63ba4b1a-92cb-4b90-8d9d-a0636bfff786","uri":"file:///Users/mara311/Desktop/gitHub/tryCloud_SG_Jenkins1/src/test/resources/features/us01_login.feature","name":"verify user login successfully \"User65\"","language":"en","steps":[{"text":"user on the login page","id":"d58aeddf-2681-46e7-b2a5-91fffb74d2f4","astNodeIds":["fe098ec3-4486-4ab7-bb0e-2c7f58e7ca28"]},{"text":"user enter valid \"User65\" and \"Userpass123\"","id":"47bff573-7d41-47f3-87dc-3d0a1ddab454","astNodeIds":["1e27dc3e-e25c-4327-a3a0-34bd86d5c318","9848a606-c618-4934-a0ad-9d4f40eb1ede"]},{"text":"user click login button","id":"f0bc4634-70a0-4840-a612-6a9dce660d6a","astNodeIds":["cd284527-2130-4268-8e3d-6212cdc14d27","9848a606-c618-4934-a0ad-9d4f40eb1ede"]},{"text":"user should be at dashboard page","id":"9053c0ea-573c-43c1-a7e9-8cc46e7a351c","astNodeIds":["dfd5433c-8d10-42a0-b4a8-46a401fea67b","9848a606-c618-4934-a0ad-9d4f40eb1ede"]}],"tags":[{"name":"@smoke","astNodeId":"615ebe92-672a-42f2-a129-211ef5443ea7"}],"astNodeIds":["d8449bad-da21-4f06-9d07-9a4da18c29c6","9848a606-c618-4934-a0ad-9d4f40eb1ede"]}},{"pickle":{"id":"77bf9501-6450-42d0-89b8-1a229fb82fb6","uri":"file:///Users/mara311/Desktop/gitHub/tryCloud_SG_Jenkins1/src/test/resources/features/us01_login.feature","name":"verify user login fail with invalid credentials \"User9\"","language":"en","steps":[{"text":"user on the login page","id":"9c22e2f1-cadc-45f1-bfde-538a9ddeaed0","astNodeIds":["fe098ec3-4486-4ab7-bb0e-2c7f58e7ca28"]},{"text":"user enter valid \"User9\" and \"Wrong\"","id":"64fd7179-9421-470c-a2d0-e1df1f0f8c5b","astNodeIds":["f12652e6-6ea5-4908-bf8d-70d0c660aca4","a48d673e-2886-4597-bc65-84843e94be28"]},{"text":"user click login button","id":"7f229418-317a-45a7-8ba4-3473324d9547","astNodeIds":["5c1f9178-0859-496d-a01f-2fe5a60c1b2f","a48d673e-2886-4597-bc65-84843e94be28"]},{"text":"\"Wrong username or password.\" message should be displayed","id":"59420acd-1881-47a9-ae82-9ab120a711a8","astNodeIds":["6da6286f-af3d-47b9-abe1-dc5f5da2febb","a48d673e-2886-4597-bc65-84843e94be28"]}],"tags":[{"name":"@smoke","astNodeId":"615ebe92-672a-42f2-a129-211ef5443ea7"}],"astNodeIds":["ba5e94f3-e375-4675-a2ad-172a421b50ca","a48d673e-2886-4597-bc65-84843e94be28"]}},{"pickle":{"id":"bfccc9d8-31b8-43bd-80ea-127e37c40688","uri":"file:///Users/mara311/Desktop/gitHub/tryCloud_SG_Jenkins1/src/test/resources/features/us01_login.feature","name":"verify user login fail with invalid credentials \"Wrong\"","language":"en","steps":[{"text":"user on the login page","id":"8afdf48e-4c25-4eac-bf3d-61bb5940ef7b","astNodeIds":["fe098ec3-4486-4ab7-bb0e-2c7f58e7ca28"]},{"text":"user enter valid \"Wrong\" and \"Userpass123\"","id":"2ea1463c-232d-4a89-a8ae-fecc2e30bb78","astNodeIds":["f12652e6-6ea5-4908-bf8d-70d0c660aca4","644cf4e1-8d65-4741-8f60-43fa5f3f36f4"]},{"text":"user click login button","id":"6f3b6985-e52a-451f-bfe7-4a02b890419f","astNodeIds":["5c1f9178-0859-496d-a01f-2fe5a60c1b2f","644cf4e1-8d65-4741-8f60-43fa5f3f36f4"]},{"text":"\"Wrong username or password.\" message should be displayed","id":"a0345e52-6137-4569-84b4-f5d2fd48fa86","astNodeIds":["6da6286f-af3d-47b9-abe1-dc5f5da2febb","644cf4e1-8d65-4741-8f60-43fa5f3f36f4"]}],"tags":[{"name":"@smoke","astNodeId":"615ebe92-672a-42f2-a129-211ef5443ea7"}],"astNodeIds":["ba5e94f3-e375-4675-a2ad-172a421b50ca","644cf4e1-8d65-4741-8f60-43fa5f3f36f4"]}},{"pickle":{"id":"f6acdf72-7738-4aad-973e-451b31a524b6","uri":"file:///Users/mara311/Desktop/gitHub/tryCloud_SG_Jenkins1/src/test/resources/features/us01_login.feature","name":"verify user login fail with invalid credentials \"Wrong\"","language":"en","steps":[{"text":"user on the login page","id":"83df90dd-fbca-489b-9084-d4bbb534fbd6","astNodeIds":["fe098ec3-4486-4ab7-bb0e-2c7f58e7ca28"]},{"text":"user enter valid \"Wrong\" and \"Wrong\"","id":"1f24dedd-6417-4bcc-a9a9-0c0b5e3ea512","astNodeIds":["f12652e6-6ea5-4908-bf8d-70d0c660aca4","008fc0de-495e-45b8-91a6-aca0dc876f66"]},{"text":"user click login button","id":"11c98f17-9e17-4a59-b9cf-8f56b49176c8","astNodeIds":["5c1f9178-0859-496d-a01f-2fe5a60c1b2f","008fc0de-495e-45b8-91a6-aca0dc876f66"]},{"text":"\"Wrong username or password.\" message should be displayed","id":"d29ee47f-ab51-4a96-9ea6-fe9e45138f10","astNodeIds":["6da6286f-af3d-47b9-abe1-dc5f5da2febb","008fc0de-495e-45b8-91a6-aca0dc876f66"]}],"tags":[{"name":"@smoke","astNodeId":"615ebe92-672a-42f2-a129-211ef5443ea7"}],"astNodeIds":["ba5e94f3-e375-4675-a2ad-172a421b50ca","008fc0de-495e-45b8-91a6-aca0dc876f66"]}},{"source":{"uri":"file:///Users/mara311/Desktop/gitHub/tryCloud_SG_Jenkins1/src/test/resources/features/us02_modules.feature","data":"@smoke\nFeature: As a user, I should be access all the main modules of the app.\n\n  Background:\n    Given user on the login page\n\n  Scenario: As a user, I should be access all the main modules of the app.\n    When user  log in with valid credentials\n    Then Verify the user see the following modules:\n      | Dashboard |\n      | Files     |\n      | Photos    |\n      | Activity  |\n      | Talk      |\n      | Mail      |\n      | Contacts  |\n      | Circles   |\n      | Calendar  |\n      | Deck      |\n      | More      |","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///Users/mara311/Desktop/gitHub/tryCloud_SG_Jenkins1/src/test/resources/features/us02_modules.feature","feature":{"location":{"line":2,"column":1},"tags":[{"location":{"line":1,"column":1},"name":"@smoke","id":"004711b8-5cfd-4877-b322-69b6fdef7f01"}],"language":"en","keyword":"Feature","name":"As a user, I should be access all the main modules of the app.","children":[{"background":{"location":{"line":4,"column":3},"keyword":"Background","steps":[{"location":{"line":5,"column":5},"keyword":"Given ","text":"user on the login page","id":"1b4db260-1b89-4ca2-b372-980c03c39211"}],"id":"1815d8d5-da26-40af-a771-c6e72644efee"}},{"scenario":{"location":{"line":7,"column":3},"keyword":"Scenario","name":"As a user, I should be access all the main modules of the app.","steps":[{"location":{"line":8,"column":5},"keyword":"When ","text":"user  log in with valid credentials","id":"85fa5e6e-6859-4cb2-8f4f-2a384df2c6e9"},{"location":{"line":9,"column":5},"keyword":"Then ","text":"Verify the user see the following modules:","dataTable":{"location":{"line":10,"column":7},"rows":[{"location":{"line":10,"column":7},"cells":[{"location":{"line":10,"column":9},"value":"Dashboard"}],"id":"132f03cd-b8bd-4b7c-8ac0-85d402c197e2"},{"location":{"line":11,"column":7},"cells":[{"location":{"line":11,"column":9},"value":"Files"}],"id":"88cba021-966d-4a79-bb28-36b8580c29c7"},{"location":{"line":12,"column":7},"cells":[{"location":{"line":12,"column":9},"value":"Photos"}],"id":"ed440577-4f4d-4d21-b4d7-2d150467052a"},{"location":{"line":13,"column":7},"cells":[{"location":{"line":13,"column":9},"value":"Activity"}],"id":"fb971079-35cc-415c-86e8-9cc907550910"},{"location":{"line":14,"column":7},"cells":[{"location":{"line":14,"column":9},"value":"Talk"}],"id":"50147f23-35f4-4419-a711-58c19994653a"},{"location":{"line":15,"column":7},"cells":[{"location":{"line":15,"column":9},"value":"Mail"}],"id":"1ac8b4a8-081a-4cd1-b810-aa46103c7d50"},{"location":{"line":16,"column":7},"cells":[{"location":{"line":16,"column":9},"value":"Contacts"}],"id":"3f7ba9a8-f6c6-49cb-bd1c-f56bb17bcc27"},{"location":{"line":17,"column":7},"cells":[{"location":{"line":17,"column":9},"value":"Circles"}],"id":"ebca6d8f-c0a0-4f38-9ef8-4f0594e4b5bd"},{"location":{"line":18,"column":7},"cells":[{"location":{"line":18,"column":9},"value":"Calendar"}],"id":"a688f31a-6142-4527-bae0-47662b8c3482"},{"location":{"line":19,"column":7},"cells":[{"location":{"line":19,"column":9},"value":"Deck"}],"id":"a77db296-5d28-4b99-90b9-465f5ec49dab"},{"location":{"line":20,"column":7},"cells":[{"location":{"line":20,"column":9},"value":"More"}],"id":"42fa517f-3556-4e39-b075-55d54de68e86"}]},"id":"1ec49f50-d6a0-42f3-82f1-864263d1b056"}],"id":"d0de9240-d534-471f-b77e-446314f6f79a"}}]}}},{"pickle":{"id":"bc80e830-d171-4e5f-92d4-a69fec67d696","uri":"file:///Users/mara311/Desktop/gitHub/tryCloud_SG_Jenkins1/src/test/resources/features/us02_modules.feature","name":"As a user, I should be access all the main modules of the app.","language":"en","steps":[{"text":"user on the login page","id":"1700c936-649e-41c7-bb9d-5feb4b167e8a","astNodeIds":["1b4db260-1b89-4ca2-b372-980c03c39211"]},{"text":"user  log in with valid credentials","id":"8189c7b0-bf22-4ae6-8f98-9c6ea0e5517b","astNodeIds":["85fa5e6e-6859-4cb2-8f4f-2a384df2c6e9"]},{"text":"Verify the user see the following modules:","argument":{"dataTable":{"rows":[{"cells":[{"value":"Dashboard"}]},{"cells":[{"value":"Files"}]},{"cells":[{"value":"Photos"}]},{"cells":[{"value":"Activity"}]},{"cells":[{"value":"Talk"}]},{"cells":[{"value":"Mail"}]},{"cells":[{"value":"Contacts"}]},{"cells":[{"value":"Circles"}]},{"cells":[{"value":"Calendar"}]},{"cells":[{"value":"Deck"}]},{"cells":[{"value":"More"}]}]}},"id":"6f188419-15f2-4f76-9864-4d4f1e894451","astNodeIds":["1ec49f50-d6a0-42f3-82f1-864263d1b056"]}],"tags":[{"name":"@smoke","astNodeId":"004711b8-5cfd-4877-b322-69b6fdef7f01"}],"astNodeIds":["d0de9240-d534-471f-b77e-446314f6f79a"]}},{"source":{"uri":"file:///Users/mara311/Desktop/gitHub/tryCloud_SG_Jenkins1/src/test/resources/features/us03_files.feature","data":"@reg\nFeature: As a user, I should be able to access to Files module.\n  Background:\n    Given user on the dashboard page\n    When user clicks \"Files\" module\n\n  Scenario: verify users can access to Files module\n    Then verify the page title is \"Files - Trycloud QA\"\n\n  Scenario: verify users can select all the uploaded files from the page\n    And user click the top left checkbox of the table\n    Then verify all the files are selected","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///Users/mara311/Desktop/gitHub/tryCloud_SG_Jenkins1/src/test/resources/features/us03_files.feature","feature":{"location":{"line":2,"column":1},"tags":[{"location":{"line":1,"column":1},"name":"@reg","id":"51ab509c-a64b-4855-a41c-e9e87e4df66e"}],"language":"en","keyword":"Feature","name":"As a user, I should be able to access to Files module.","children":[{"background":{"location":{"line":3,"column":3},"keyword":"Background","steps":[{"location":{"line":4,"column":5},"keyword":"Given ","text":"user on the dashboard page","id":"96bfe305-cb27-4552-ab3c-d36c615813d6"},{"location":{"line":5,"column":5},"keyword":"When ","text":"user clicks \"Files\" module","id":"f8b9a7b7-65a6-483f-8018-762fcaf55020"}],"id":"8e55fbff-4458-44a4-add3-df7bf52d42be"}},{"scenario":{"location":{"line":7,"column":3},"keyword":"Scenario","name":"verify users can access to Files module","steps":[{"location":{"line":8,"column":5},"keyword":"Then ","text":"verify the page title is \"Files - Trycloud QA\"","id":"dca7170a-6f20-41cd-a2cc-6fb065d1c03b"}],"id":"558ad589-2778-4c35-a697-11de7297a4f4"}},{"scenario":{"location":{"line":10,"column":3},"keyword":"Scenario","name":"verify users can select all the uploaded files from the page","steps":[{"location":{"line":11,"column":5},"keyword":"And ","text":"user click the top left checkbox of the table","id":"6657f05b-163d-4b65-a12a-20e48d1d9515"},{"location":{"line":12,"column":5},"keyword":"Then ","text":"verify all the files are selected","id":"9165baee-64ba-45c1-8614-39a9bd061430"}],"id":"bf6e26dd-5fee-44b1-aa9f-40e5277d7c0d"}}]}}},{"pickle":{"id":"9f963822-9072-4cca-8b3d-1dc94e1390fe","uri":"file:///Users/mara311/Desktop/gitHub/tryCloud_SG_Jenkins1/src/test/resources/features/us03_files.feature","name":"verify users can access to Files module","language":"en","steps":[{"text":"user on the dashboard page","id":"7a83fd9b-2748-44dc-a931-364868191597","astNodeIds":["96bfe305-cb27-4552-ab3c-d36c615813d6"]},{"text":"user clicks \"Files\" module","id":"45a45c26-a4af-463a-a329-244349d8ef68","astNodeIds":["f8b9a7b7-65a6-483f-8018-762fcaf55020"]},{"text":"verify the page title is \"Files - Trycloud QA\"","id":"3715ebef-1f84-43c4-9f6b-f940a5704f5f","astNodeIds":["dca7170a-6f20-41cd-a2cc-6fb065d1c03b"]}],"tags":[{"name":"@reg","astNodeId":"51ab509c-a64b-4855-a41c-e9e87e4df66e"}],"astNodeIds":["558ad589-2778-4c35-a697-11de7297a4f4"]}},{"pickle":{"id":"e2207d13-5ab7-49b6-8f56-6787d7c49368","uri":"file:///Users/mara311/Desktop/gitHub/tryCloud_SG_Jenkins1/src/test/resources/features/us03_files.feature","name":"verify users can select all the uploaded files from the page","language":"en","steps":[{"text":"user on the dashboard page","id":"39aa29ce-974b-448c-ada3-0a69b7e233e0","astNodeIds":["96bfe305-cb27-4552-ab3c-d36c615813d6"]},{"text":"user clicks \"Files\" module","id":"7956989e-5e2a-4faa-b27f-fb6d7f7795dd","astNodeIds":["f8b9a7b7-65a6-483f-8018-762fcaf55020"]},{"text":"user click the top left checkbox of the table","id":"905f98c0-2a00-4694-8a79-1303b7122902","astNodeIds":["6657f05b-163d-4b65-a12a-20e48d1d9515"]},{"text":"verify all the files are selected","id":"9e11181c-77d1-4dae-b753-5426cb101a05","astNodeIds":["9165baee-64ba-45c1-8614-39a9bd061430"]}],"tags":[{"name":"@reg","astNodeId":"51ab509c-a64b-4855-a41c-e9e87e4df66e"}],"astNodeIds":["bf6e26dd-5fee-44b1-aa9f-40e5277d7c0d"]}},{"source":{"uri":"file:///Users/mara311/Desktop/gitHub/tryCloud_SG_Jenkins1/src/test/resources/features/us04_addFavorites.feature","data":"@reg\nFeature: As a user, I should be able to access to Files module - Favorites button\n\n  Background:\n    Given user on the dashboard page\n    When user clicks \"Files\" module\n\n  Scenario: As a user, I should be able to add files to Favorites\n    When user click action-icon  from any file on the page\n    And user choose \"Add to favorites\" option\n    And user click \"Favorites\" sub-module on the left side\n    Then Verify the chosen file is listed on the table\n\n","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///Users/mara311/Desktop/gitHub/tryCloud_SG_Jenkins1/src/test/resources/features/us04_addFavorites.feature","feature":{"location":{"line":2,"column":1},"tags":[{"location":{"line":1,"column":1},"name":"@reg","id":"03bd674c-00c6-44c7-a9ab-8ec56725d98b"}],"language":"en","keyword":"Feature","name":"As a user, I should be able to access to Files module - Favorites button","children":[{"background":{"location":{"line":4,"column":3},"keyword":"Background","steps":[{"location":{"line":5,"column":5},"keyword":"Given ","text":"user on the dashboard page","id":"f75f0f0d-8a76-4656-90fe-6dc1fc035375"},{"location":{"line":6,"column":5},"keyword":"When ","text":"user clicks \"Files\" module","id":"64da8c59-08f1-4cec-aa76-0b9e076cb888"}],"id":"8254a7ed-171a-4412-952a-a2bd013bb4a4"}},{"scenario":{"location":{"line
